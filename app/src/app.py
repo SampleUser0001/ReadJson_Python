@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
 from logging import getLogger, config, StreamHandler, DEBUG
 import os
+import json
+
+from keys.comments_keys import Top, NextPageToken, Items
+from keys.sample_keys import SampleKeys
+from dataclasses.sample_data import 
 
 import sys
 sys.path.append('./')
@@ -18,6 +23,9 @@ logger.setLevel(DEBUG)
 logger.addHandler(handler)
 logger.propagate = False
 
+# IMPORT_FILE_PATH = PYTHON_APP_HOME + '/file/comments_7K1WZ5Sfgw0_20210911_215902.json'
+IMPORT_FILE_PATH = PYTHON_APP_HOME + '/file/sample.json'
+
 if __name__ == '__main__':
   # .envの取得
   # setting.ENV_DIC[ImportEnvKeyEnum.importenvに書いた値.value]
@@ -27,5 +35,11 @@ if __name__ == '__main__':
   # args[0]はpythonのファイル名。
   # 実際の引数はargs[1]から。
   
-  print('Hello Python on Docker!!')
-  logger.info('This is logger message!!')
+  with open(IMPORT_FILE_PATH, mode='r') as f:
+    sample_dict = json.load(f)
+
+#  print(Top.KEY.value)
+#  print(Top.PAGE_INFO.value)
+  
+  print(SampleKeys.KEYS.value)
+  

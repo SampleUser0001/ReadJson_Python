@@ -1,0 +1,17 @@
+{
+  "hoge01": "aaa",
+  "piyo01": {
+    "piyo11" : "bbb",
+    "piyo12" : "ccc"
+  },
+  "fuga01" : [
+    {
+      "fuga11" : "ddd",
+      "fuga12" : "eee"
+    },
+    {
+      "fuga11" : "fff",
+      "fuga12" : "ggg"
+    }
+  ]
+}
