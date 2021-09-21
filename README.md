@@ -4,8 +4,16 @@ Pythonでjsonをいい感じに読み込んで扱う方法を調査する。
 
 ## 実行
 
+### dataclass <-> dict 変換のサンプル
+
 ``` sh
-docker-compose up
+docker-compose run python test.py
+```
+
+### json -> dict -> dataclass 変換のサンプル
+
+``` sh
+docker-compose run python app.py
 ```
 
 ## 参考

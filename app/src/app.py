@@ -3,9 +3,7 @@ from logging import getLogger, config, StreamHandler, DEBUG
 import os
 import json
 
-from keys.comments_keys import Top, NextPageToken, Items
-from keys.sample_keys import SampleKeys
-from dataclasses.sample_data import 
+from dataclass.sample_data import *
 
 import sys
 sys.path.append('./')
@@ -41,5 +39,6 @@ if __name__ == '__main__':
 #  print(Top.KEY.value)
 #  print(Top.PAGE_INFO.value)
   
-  print(SampleKeys.KEYS.value)
+  sample_data_json = SampleJsonData(**sample_dict)
+  print(sample_data_json)
   
