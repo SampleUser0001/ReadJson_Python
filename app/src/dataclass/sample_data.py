@@ -18,6 +18,8 @@ class SampleJsonData:
   hoge01: str = None
   piyo01: Piyo01 = None
   fuga01: List[Fuga01] = field(default_factory=list)
-  notDefinedInJson: str = None
+  notDefinedInJsonStr: str = None
   sampleDate: datetime = None
   sampleInteger: int = None
+  sampleBool: bool = None
+  notDefinedInJsonBool: bool = None
