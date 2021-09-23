@@ -13,5 +13,7 @@
       "fuga11" : "fff",
       "fuga12" : "ggg"
     }
-  ]
+  ],
+  "sampleDate": "2021-09-11T12:45:18.448117+00:00",
+  "sampleInteger": 10
 }
