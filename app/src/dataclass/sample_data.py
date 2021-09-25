@@ -20,9 +20,12 @@ class SampleJsonData:
   hoge01: str = None
   piyo01: Piyo01 = None
   fuga01: List[Fuga01] = field(default_factory=list)
-  notDefinedInJsonStr: str = '' # 存在しない可能性がある値は
   sampleDate: datetime = None
   sampleInteger: int = None
   sampleBool: bool = None
-  notDefinedInJsonBool: bool = False
   intlist: List[int] = field(default_factory=list)
+  notDefinedInJsonInt: int = None # 存在しない可能性があるキーはNoneでも動くが、ワーニングが出る。
+  notDefinedInJsonStr: str = ''
+  notDefinedInJsonBool: bool = False
+  notDefinedInJsonDatetime: datetime = ''
+  notDefinedInJsonListFuga01: List[Fuga01] = field(default_factory=list)

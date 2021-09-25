@@ -4,7 +4,6 @@ import os
 import json
 
 from dataclass.sample_data import *
-from dataclasses_json import dataclass_json
 
 from logutil import LogUtil
 from importenv import ImportEnvKeyEnum
@@ -55,5 +54,14 @@ if __name__ == '__main__':
   fuga01 = Fuga01(**sample_json_data.fuga01[0])
   print(type(fuga01))
   
+  tmp = None
+  
   # こっちが正解。dataclasses_jsonモジュールを使用した変換。
-  print(SampleJsonData.from_dict(sample_dict))
+  sample_json_data_2 = SampleJsonData.from_dict(sample_dict)
+  print(sample_json_data_2)
+
+  print('type(notDefinedInJsonInt) : {}'.format(type(sample_json_data_2.notDefinedInJsonInt)))
+  print('type(notDefinedInJsonStr) : {}'.format(type(sample_json_data_2.notDefinedInJsonStr)))
+  print('type(notDefinedInJsonBool) : {}'.format(type(sample_json_data_2.notDefinedInJsonBool)))
+  print('type(notDefinedInJsonDatetime) : {}'.format(type(sample_json_data_2.notDefinedInJsonDatetime)))
+  print('type(notDefinedInJsonListFuga01) : {}'.format(type(sample_json_data_2.notDefinedInJsonListFuga01)))
