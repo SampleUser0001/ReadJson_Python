@@ -4,9 +4,8 @@ import os
 import json
 
 from dataclass.sample_data import *
+from dataclasses_json import dataclass_json
 
-import sys
-sys.path.append('./')
 from logutil import LogUtil
 from importenv import ImportEnvKeyEnum
 import importenv as setting
@@ -38,7 +37,23 @@ if __name__ == '__main__':
 
 #  print(Top.KEY.value)
 #  print(Top.PAGE_INFO.value)
+
+  # dataclassesモジュールを使用した変換。
+  sample_json_data = SampleJsonData(**sample_dict)
+  print(sample_json_data)
   
-  sample_data_json = SampleJsonData(**sample_dict)
-  print(sample_data_json)
+  print(type(sample_json_data))
+  # list[int]みたいなプリミティブな型は問題ないが…
+  print(type(sample_json_data.intlist[0]))
+
+  # list[Fuga01]みたいな自作クラスを含めた変換ができない。dictになる。
+  print(type(sample_json_data.fuga01[0]))
   
+  # こちらはlistを含めていないが、自作クラスを含めた変換はやはりできない。dictになる。
+  print(type(sample_json_data.piyo01))
+  
+  fuga01 = Fuga01(**sample_json_data.fuga01[0])
+  print(type(fuga01))
+  
+  # こっちが正解。dataclasses_jsonモジュールを使用した変換。
+  print(SampleJsonData.from_dict(sample_dict))

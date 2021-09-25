@@ -26,3 +26,6 @@ docker-compose run python app.py
 ## 参考
 
 - [Pythonのdataclassをdictやjsonと相互に変換する方法を解説！:浜介ブログ](https://1kara-hajimeru.com/2021/02/1691/)
+- [Pythonはデフォルト値でオブジェクトにdictをネストしました:FIXES.PUB](https://www.fixes.pub/program/160527.html)
+    - [lidatong/dataclasses-json:github](https://github.com/lidatong/dataclasses-json)
+      - dataclass_json公式
