@@ -1,0 +1,39 @@
+{
+  "kind": "youtube#liveChatMessageListResponse",
+  "etag": "QEo9Ur7n55X9jwc46RFJmzUVPX4",
+  "pollingIntervalMillis": 5089,
+  "pageInfo": {
+    "totalResults": 81,
+    "resultsPerPage": 81
+  },
+  "nextPageToken": "GO2F55_E0fMCIM_j7KPE0fMC",
+  "items": [
+    {
+      "kind": "youtube#liveChatMessage",
+      "etag": "rtngJ3g_MxSuu22YIRtuKxPsQiA",
+      "id": "LCC.CjgKDQoLdkFlV0kyem5la1EqJwoYVUNBV1N5RXNfSW84TXRwWTNtLXpxSUxBEgt2QWVXSTJ6bmVrURIvCi1DT2FYaW9EWmhfTUNGZFRjNHdjZE13MEdUdy1Mb3lNZXNJRC0zMjY4OTUzNDA",
+      "snippet": {
+        "type": "memberMilestoneChatEvent",
+        "liveChatId": "Cg0KC3ZBZVdJMnpuZWtRKicKGFVDQVdTeUVzX0lvOE10cFkzbS16cUlMQRILdkFlV0kyem5la1E",
+        "authorChannelId": "UCsp8suGRViHa-vJGTlUZjCQ",
+        "publishedAt": "2021-10-17T13:18:20.15184+00:00",
+        "hasDisplayContent": true,
+        "displayMessage": "Ronson Chan celebrates 6 months of membership",
+        "memberMilestoneChatDetails": {
+          "memberLevelName": "ねねプロダクション",
+          "memberMonth": 6
+        }
+      },
+      "authorDetails": {
+        "channelId": "UCsp8suGRViHa-vJGTlUZjCQ",
+        "channelUrl": "http://www.youtube.com/channel/UCsp8suGRViHa-vJGTlUZjCQ",
+        "displayName": "Ronson Chan",
+        "profileImageUrl": "https://yt3.ggpht.com/ytc/AKedOLRFHamvSYz4hLHz5d-ka5HqVPpdxzEhnacr5w=s88-c-k-c0x00ffffff-no-rj",
+        "isVerified": false,
+        "isChatOwner": false,
+        "isChatSponsor": true,
+        "isChatModerator": false
+      }
+    }
+  ]
+}

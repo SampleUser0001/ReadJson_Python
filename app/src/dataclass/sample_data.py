@@ -24,7 +24,7 @@ class SampleJsonData:
   sampleInteger: int = None
   sampleBool: bool = None
   intlist: List[int] = field(default_factory=list)
-  notDefinedInJsonInt: int = None # 存在しない可能性があるキーはNoneでも動くが、ワーニングが出る。
+  notDefinedInJsonInt: int = 0 # 存在しない可能性があるキーはNoneでも動くが、ワーニングが出る。
   notDefinedInJsonStr: str = ''
   notDefinedInJsonBool: bool = False
   notDefinedInJsonDatetime: datetime = ''
