@@ -13,7 +13,19 @@ docker-compose run python test.py
 ### json -> dict -> dataclass 変換のサンプル
 
 ``` sh
-docker-compose run python app.py
+docker-compose run python app.py sample
+```
+
+### Youtube Live Comment API の実行結果のサンプル
+
+``` sh
+docker-compose run python app.py live vAeWI2znekQ/comments_vAeWI2znekQ_20211017_221838.json
+```
+
+### Youtube Live Comment API の実行結果のマージのサンプル
+
+``` sh
+docker-compose run python app.py merge vAeWI2znekQ
 ```
 
 #### 備考

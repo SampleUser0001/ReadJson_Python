@@ -12,6 +12,8 @@ import importenv as setting
 
 from json_import.live import Live
 from json_import.sample import Sample
+from json_import.merge import Merge
+
 
 PYTHON_APP_HOME = os.getenv('PYTHON_APP_HOME')
 logger = getLogger(__name__)
@@ -23,8 +25,9 @@ logger.setLevel(DEBUG)
 logger.addHandler(handler)
 logger.propagate = False
 
-LIVE_JSON = PYTHON_APP_HOME + '/file/comments_vAeWI2znekQ_20211017_221838.json'
+FILE_HOME = PYTHON_APP_HOME + '/file/'
 SAMPLE_JSON = PYTHON_APP_HOME + '/file/sample.json'
+
 
 if __name__ == '__main__':
   # .envの取得
@@ -39,8 +42,9 @@ if __name__ == '__main__':
   file_type = args[1]
   
   if file_type == 'live':
-    Live.import_file(LIVE_JSON)
+    Live.import_file(FILE_HOME + args[2])
   elif file_type == 'sample':
     Sample.import_file(SAMPLE_JSON)
-
+  elif file_type == 'merge':
+    Merge.import_file(FILE_HOME + args[2] + '/')
   

@@ -10,3 +10,12 @@ class Live:
     
     print(type(live_comment))
     print(type(live_comment.items[0].id))
+    print(type(live_comment.items[0]))
+    print(type(live_comment.items[0].snippet))
+    
+    item_list = []
+    for item in live_comment.items:
+      item_list.append(item)
+
+    print(len(item_list))
+    

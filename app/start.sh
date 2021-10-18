@@ -3,4 +3,4 @@
 export PYTHON_APP_HOME=`pwd`
 
 cd src
-python app.py $1
+python $1 $2 $3 
